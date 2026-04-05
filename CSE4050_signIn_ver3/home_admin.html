@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--tag for mobile responsiveness-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page - Happy Tails</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles1.css">
+    <link rel="stylesheet" href="admin-theme.css">
+    <style></style>
+
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="header bg-gray-800 text-center text-white">
+            <h1>Happy Tails</h1>
+            <h2>Dog Day Care Attendance Manager</h2>
+        </div>
+            <!--👉Don’t nest based on “what grouped-->
+            <!--👉 Nest based on layout role and meaning-->
+
+            <div class="menu">
+                <ul>
+                    <li><a href="checkIn.html" target="_blank">Pooch check in</a></li>
+                    <li><a href="actitySynch.html">Connect to dog caregivers</a></li>
+                    <li><a href="report.html">Canine behavior hub</a></li>
+                    <li><a href="report.html">Daily dog report portal</a></li>
+                    <li><a href="checkOut.html" target="_blank">Pooch check out</a></li>
+                    <li><a href="register.html">New Client Registration</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2>You care for the dogs—we’ll track everything else:</h2>
+                <img src="homePage.png" alt="visual purpose of software" width="250" height="300">
+            </div>
+
+            <div class="facts">
+                <h1>Schedule</h1>
+                <ul>
+                    <li>Morning walk: 8:00 AM</li>
+                    <li>Feeding time: 12:00 PM</li>
+                    <li>Afternoon walk: 4:00 PM</li>
+                    <li>Evening walk: 8:00 PM</li>
+                </ul>
+            </div>
+
+            <div class="footer">
+                <p>Current time: <span id="current-datetime"></span></p>
+                <p>
+                    <time datetime="2026-03-28T14:41:00-07:00">
+                    </time>
+                </p>
+            </div>
+
+            <script>
+            function displayCurrentDateTime() {
+                const now = new Date();
+                // Formats the date and time based on the user's local settings.
+                const formattedDateTime = now.toLocaleString();
+                document.getElementById('current-datetime').textContent = formattedDateTime;
+            }
+
+            // Run the function once immediately, then update every second (1000ms).
+            displayCurrentDateTime();
+            setInterval(displayCurrentDateTime, 1000);
+            </script>
+
+</body>
+</html>
