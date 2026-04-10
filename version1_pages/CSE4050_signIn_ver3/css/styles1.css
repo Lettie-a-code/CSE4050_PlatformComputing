@@ -1,0 +1,154 @@
+﻿/* Apply box sizing globally */
+* {
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: "Lucida Sans", sans-serif;
+    font-size: 17px;
+}
+
+/* Grid layout */
+/*A grid container contains one or more grid items arranged in columns and rows.*/
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'menu'
+        'header'
+        'content'
+        'facts'
+        'footer';    
+    background-color: white;
+    gap: 5px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    grid-area: header;
+}
+
+    .header > h1 {
+        font-size: 40px;
+    }
+
+/* Menu ->There is stacked spacing  reduced margin-top and padding ul  */
+    .menu {
+    margin-top: 0px;
+    grid-area: menu;
+}
+
+    .menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 30px;
+    }
+
+    .menu li {
+        padding: 4px;
+        margin-bottom: 3px;
+        background-color: #33b5e5;
+        color: #ffffff;
+    }
+
+        .menu li:hover {
+            background-color: #0099cc;
+        }
+
+/* Content ->The element falls out of the grid
+   Layout looks wrong (stacked or misplaced)
+*/
+.content {
+    grid-area: content;
+}
+
+    .content > h1 {
+        font-size: 30px;
+        margin-bottom: 7px;
+    }
+
+    .content > p {
+        margin-bottom: 7px;
+    }
+
+/* Facts */
+.facts {
+    grid-area: facts;
+    border: 1px solid #0099cc;
+    background-color: beige;
+    padding: 10px;
+}
+
+    .facts > h2 {
+        font-size: 20px;
+    }
+
+    .facts li {
+        margin-bottom: 5px;
+    }
+
+
+/* Footer */
+.footer {
+    grid-area: footer;
+    background-color: #0099cc;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Responsive layout */
+@media (min-width: 600px) {
+    .header {
+        grid-area: 1 / span 6;
+    }
+
+    .menu {
+        grid-area: 2 / span 1;
+    }
+
+    .content {
+        grid-area: 2 / span 4;
+    }
+
+    .facts {
+        grid-area: 2 / span 1;
+    }
+
+    .footer {
+        grid-area: 3 / span 6;
+    }
+}
+
+/* Image centering */
+img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+/*Clean mobile layout (base CSS)*/
+.menu ul {
+    padding: 10px;
+}
+
+.menu li {
+    padding: 12px;
+}
+
+.content img {
+    width: 100%;
+    height: auto;
+}
+/*Prevent text overflow on small screens*/
+
+@media (max-width: 599px) {
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .header h2 {
+        font-size: 16px;
+    }
+}

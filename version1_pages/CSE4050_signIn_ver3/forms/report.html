@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Activity Report</title>
+    <link rel="stylesheet" href="../css/report.css">
+
+    <style>
+      
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+
+        <!-- NAVIGATION -->
+        <nav class="sidebar">
+            <h2>🐾 Menu</h2>
+            <ul>
+                <li><a href="home_tech.html">Home</a></li>
+                <li><a href="report.html">Daily Report</a></li>
+                <li><a href="checkOut.html">Check Out</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <!-- HEADER -->
+        <div class="header-container">
+            <h1>🐾 Dog Activity Report</h1>
+        </div>
+
+        <!-- HERO IMAGE -->
+        <div class="hero"></div>
+
+        <!-- FORM -->
+        <div class="form-container">
+
+            <form>
+
+                <label>🐶 Name of Dog</label>
+                <input type="text" placeholder="Enter dog's name">
+
+                <label>🎾 Play Style</label>
+                <select>
+                    <option>Gentle</option>
+                    <option>Withdrawn</option>
+                    <option>Shy</option>
+                    <option>Dominant</option>
+                </select>
+
+                <label>😊 Temperament</label>
+                <select>
+                    <option>Happy</option>
+                    <option>Anxious</option>
+                    <option>Aggressive</option>
+                </select>
+
+                <!-- Appetite -->
+                <div class="section">
+                    <div class="section-title">🍽 Appetite</div>
+                    <div class="radio-group">
+                        <label><input type="radio" name="appetite"> Poor</label>
+                        <label><input type="radio" name="appetite"> Normal</label>
+                    </div>
+                </div>
+
+                <!-- Hydration -->
+                <div class="section">
+                    <div class="section-title">💧 Hydration</div>
+                    <div class="radio-group">
+                        <label><input type="radio" name="hydration"> Normal</label>
+                        <label><input type="radio" name="hydration"> Abnormal</label>
+                    </div>
+                </div>
+
+                <!-- Energy -->
+                <div class="section">
+                    <div class="section-title">⚡ Energy Level</div>
+                    <div class="radio-group">
+                        <label><input type="radio" name="energy"> Low</label>
+                        <label><input type="radio" name="energy"> Relaxed</label>
+                        <label><input type="radio" name="energy"> Playful</label>
+                        <label><input type="radio" name="energy"> High</label>
+                        <label><input type="radio" name="energy"> Hyper</label>
+                    </div>
+                </div>
+
+                <!-- Bathroom -->
+                <div class="section">
+                    <div class="section-title">🚽 Bathroom</div>
+
+                    <label>Bowel</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="bowel"> Formed</label>
+                        <label><input type="radio" name="bowel"> Loose</label>
+                    </div>
+
+                    <label>Bladder</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="bladder"> Normal</label>
+                        <label><input type="radio" name="bladder"> Abnormal</label>
+                    </div>
+                </div>
+
+                <!-- Comments -->
+                <div class="section">
+                    <div class="section-title">📝 Notes</div>
+                    <textarea rows="3" placeholder="Add any notes about the dog's day..."></textarea>
+                </div>
+
+                <button type="submit">Submit Report</button>
+
+            </form>
+        </div>
+    </div>
+
+</div>
+        </div>
+    </div>
+
+
+</body>
+</html>
