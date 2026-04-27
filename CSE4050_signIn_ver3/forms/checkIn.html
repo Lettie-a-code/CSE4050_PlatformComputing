@@ -5,22 +5,22 @@
     <title>Home Page - Check in</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
-   
-        <link rel="stylesheet" href="../css/tech-theme.css">
-        <link rel="stylesheet" href="../css/styles_input.css" >
 
-   <style></style>
+    <link rel="stylesheet" href="../css/tech-theme.css">
+    <link rel="stylesheet" href="../css/styles_input.css">
+
+    <style></style>
 </head>
 <body>
     <div class="grid-container">
 
         <div class="header bg-teal-600 text-center text-white">
-            <h1>Happy Tails Check In Page</h1>
+            <h1>Happy Tails Dog Day Care Attendance Manager</h1>
+            <h2>Pooch check in</h2>
         </div>
 
         <div class="content">
-            <h2>Please complete the form to check in dog</h2>
-            <img src="checkIn.png" alt="Dashboard showing dog daycare tracking system" width="60" height="80">
+            <img src="../images/checkIn.png" alt="Dashboard showing dog daycare tracking system" width="60" height="80">
         </div>
 
 
@@ -56,12 +56,14 @@
             <select id="temperament" name="temperament">
                 <option value="happy">Happy</option>
                 <option value="anxious">Anxious</option>
+                <option value="playful">Playful</option>
+                <option value="confident">Confident</option>
                 <option value="agressive">Agressive</option>
             </select>
             <br />
             <input type="submit" value="Submit">
         </form>
-    </div>   
+    </div>
 
     <div class="footer">
         <p>Current time: <span id="current-datetime"></span></p>

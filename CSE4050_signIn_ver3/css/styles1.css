@@ -10,6 +10,7 @@ body {
 }
 
 /* Grid layout */
+/*A grid container contains one or more grid items arranged in columns and rows.*/
 .grid-container {
     display: grid;
     grid-template-areas:

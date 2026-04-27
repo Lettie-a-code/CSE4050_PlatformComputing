@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Dog Information Form</title>
+</head>
+<body>
+    <form name="myForm">
+        <label for="dogName">🐶 Name of Dog</label>
+        <input type="text" id="dogName" name="dogName" placeholder="Enter dog's name">
+        <br /><br />
+
+        <label for="dobKnown">Is Date of Birth known?</label>
+        <select id="dobKnown" name="dobKnown">
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+        <br><br>
+
+        <label>Date of Birth:</label>
+
+        <!-- Day -->
+        <select name="day" id="day">
+            <option value="">Day</option>
+        </select>
+
+        <script>
+            let daySelect = document.getElementById("day");
+
+            for (let i = 1; i <= 31; i++) {
+                let option = document.createElement("option");
+                option.value = i;
+                option.textContent = i;
+                daySelect.appendChild(option);
+            }
+        </script>
+
+        <!-- Month -->
+        <select name="month">
+            <option value="">Month</option>
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select>
+
+        <!-- Year -->
+        <select name="year">
+            <option value="">Year</option>
+        </select>
+        <br><br>
+        <script>
+            for (let i = 2026; i >= 2000; i--) {
+                document.write(`<option value="${i}">${i}</option>`);
+            }
+        </script>
+
+        <label for="fname">First Name of Guardian</label>
+        <input type="text" id="fname" name="fname">
+
+        <label for="lname">Last Name of Guardian</label>
+        <input type="text" id="lname" name="lname">
+        <br><br>
+
+        <label for="phone">
+            Phone number:<br>
+            <small>Format: 123-456-7890</small>
+        </label>
+        <input type="tel" id="phone" name="phone"
+               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        <br><br>
+
+        <label for="emergency">Is this the best number for emergencies?</label>
+        <select id="emergency" name="emergency">
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+        <br><br>
+
+        <label for="breed">Breed</label>
+        <select id="breed" name="breed">
+            <option>Mix</option>
+            <option>Border Collie</option>
+            <option>Bulldog</option>
+            <option>Lab</option>
+        </select>
+        <br><br>
+
+        <label>📝 Notes</label>
+        <textarea rows="3" placeholder="If breed is not listed, enter here"></textarea>
+        <br><br>
+
+        <label>Interaction with other dogs</label><br>
+        <label><input type="radio" name="interaction"> Friendly</label>
+        <label><input type="radio" name="interaction"> Selective</label>
+        <label><input type="radio" name="interaction"> Reactive</label>
+        <br><br>
+
+        <label>Triggers</label><br>
+        <label><input type="radio" name="triggers"> Food Guarding</label>
+        <label><input type="radio" name="triggers"> Toy Guarding</label>
+        <label><input type="radio" name="triggers"> Loud Noises</label>
+        <br><br>
+
+        <label>Additional Notes</label>
+        <textarea rows="3"></textarea>
+        <br><br>
+
+        <button type="submit">Submit Report</button>
+
+    </form>
+
+</body>
+</html>
